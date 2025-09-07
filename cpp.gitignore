@@ -1,0 +1,60 @@
+# ---- Compiled object files ----
+*.o
+*.obj
+*.lo
+*.slo
+
+# ---- Precompiled headers ----
+*.gch
+*.pch
+
+# ---- Compiled Dynamic libraries ----
+*.so
+*.dylib
+*.dll
+
+# ---- Compiled Static libraries ----
+*.a
+*.lib
+
+# ---- Executables ----
+*.exe
+*.out
+*.app
+*.i*86
+*.x86_64
+*.hex
+
+# ---- Debug / profiling ----
+*.dSYM/
+*.su
+*.idb
+*.pdb
+*.mod
+*.mod.c
+*.exp
+
+# ---- CMake ----
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+build/
+build-*/
+
+# ---- Visual Studio Code ----
+.vscode/
+*.code-workspace
+
+# ---- CLion / JetBrains ----
+.idea/
+
+# ---- Mac / Linux / Windows OS junk ----
+.DS_Store
+Thumbs.db
+
+# ---- Logs ----
+*.log
+
+# ---- Personal Configuration ----
+test.*
