@@ -18,12 +18,14 @@ int main() {
         pq2[i] = 1;
         pq1.push({1, i});
     }
-    for (auto [power, type] : v) {
-        pq2[type] = max(pq2[type], power);
-        while (!pq1.empty() && pq1.top().second == type && pq1.top().first != pq2[type]) {
+    for (auto &[power, type] : v) {
+        if (power > pq2[type]) {
+            pq2[type] = power;
+            pq1.push({power, type});
+        }
+        while (!pq1.empty() && pq1.top().first != pq2[pq1.top().second]) {
             pq1.pop();
         }
-        pq1.push({power, type});
         cout << pq1.top().first << ' ';
     }
     return 0;

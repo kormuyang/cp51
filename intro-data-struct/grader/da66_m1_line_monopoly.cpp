@@ -15,7 +15,7 @@ int main() {
             auto it = s.upper_bound({l, -1});
             if (it != s.begin()) {
                 --it;
-                if (it->first <= l && l <= it->second) {
+                if (it->first <= l && l - 1 <= it->second) {
                     l = min(l, it->first);
                     r = max(r, it->second);
                     it = s.erase(it);
@@ -23,7 +23,7 @@ int main() {
                     ++it;
                 }
             }
-            while (it != s.end() && r >= it->first) {
+            while (it != s.end() && r + 1 >= it->first) {
                 r = max(r, it->second);
                 it = s.erase(it);
             }
