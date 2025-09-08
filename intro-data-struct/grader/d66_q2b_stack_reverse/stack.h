@@ -12,9 +12,7 @@ protected:
     T *mData;
     size_t mCap;
     size_t mSize;
-    ;
-    ;
-    ;
+
     void expand(size_t capacity) {
         T *arr = new T[capacity]();
         for (size_t i = 0; i < mSize; i++) {
