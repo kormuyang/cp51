@@ -1,0 +1,6 @@
+true
+true
+5
+false
+false
+total_give = 180, total_spent = 15, total_expired = 105
