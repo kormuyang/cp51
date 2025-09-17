@@ -1,0 +1,24 @@
+#ifndef __STUDENT_H_
+#define __STUDENT_H_
+
+#include "queue.h"
+#include <vector>
+
+template <typename T>
+void CP::queue<T>::remove_many(std::vector<size_t> pos) {
+    T *arr = new T[mCap]();
+    std::sort(pos.begin(), pos.end());
+    size_t prev = -1, idx = 0;
+    for (size_t i = 0; i < pos.size(); i++) {
+        for (size_t j = prev + 1; j < pos[i]; j++) {
+            arr[idx++] = mData[j];
+        }
+        prev = pos[i];
+    }
+    delete[] mData;
+    mData = arr;
+    mSize -= pos.size();
+    mFront = 0;
+}
+
+#endif
